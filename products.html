@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المنتجات | THEQA</title>
+  <meta name="description" content="تصفح جميع منتجات THEQA، ابحث وصفِّ ورتّب حسب السعر أو الاسم، وأضف ما يعجبك إلى السلة.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Meta Pixel Code — استبدل META_PIXEL_ID برقم بيكسل فيسبوك الخاص بك -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'META_PIXEL_ID');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- TikTok Pixel Code — استبدل TIKTOK_PIXEL_ID برقم بيكسل تيك توك الخاص بك -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<e.length;n++)ttq.setAndDefer(e,e[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=i+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+    ttq.load('TIKTOK_PIXEL_ID');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- End TikTok Pixel Code -->
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">THE<span>QA</span></a>
+
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html" class="active">المنتجات</a>
+        <a href="index.html#about">من نحن</a>
+        <a href="index.html#contact">تواصل معنا</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="cartToggle" aria-label="عرض السلة">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="فتح القائمة"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="التنقل في الهاتف">
+    <a href="index.html">الرئيسية</a>
+    <a href="products.html">المنتجات</a>
+    <a href="index.html#about">من نحن</a>
+    <a href="index.html#contact">تواصل معنا</a>
+  </nav>
+
+  <main>
+    <div class="page-banner">
+      <div class="container">
+        <h1>كل المنتجات</h1>
+        <p class="breadcrumb"><a href="index.html">الرئيسية</a> / المنتجات</p>
+      </div>
+    </div>
+
+    <section class="section" style="padding-top: 30px;">
+      <div class="container">
+        <div class="toolbar">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="ابحث عن منتج...">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+          </div>
+          <select class="sort-select" id="sortSelect">
+            <option value="newest">الأحدث</option>
+            <option value="price-asc">السعر: من الأرخص إلى الأغلى</option>
+            <option value="price-desc">السعر: من الأغلى إلى الأرخص</option>
+            <option value="name-asc">الاسم: أ-ي</option>
+          </select>
+        </div>
+
+        <div class="filter-chips" id="filterChips"></div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">THE<span>QA</span></a>
+          <p>متجرك الموثوق للتسوق أونلاين.</p>
+        </div>
+        <div class="footer-col">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="index.html#about">من نحن</a></li>
+            <li><a href="index.html#contact">تواصل معنا</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>تابعنا</h4>
+          <ul>
+            <li><a href="#" data-social="facebook" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="#" data-social="instagram" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" data-social="tiktok" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="#" data-social="whatsapp" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 THEQA. جميع الحقوق محفوظة.
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ===== Cart Drawer ===== -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="سلة التسوق">
+    <div class="drawer-head">
+      <h3>سلة التسوق</h3>
+      <button class="drawer-close" id="drawerClose" aria-label="إغلاق السلة">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="drawer-summary">
+      <div class="summary-row">
+        <span>المجموع الفرعي</span>
+        <span id="cartSubtotal">0 DA</span>
+      </div>
+      <button class="btn btn-primary btn-block" id="goToCheckout">إتمام الشراء</button>
+    </div>
+  </aside>
+
+  <!-- ===== Product Modal ===== -->
+  <div class="modal" id="productModal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="إغلاق">✕</button>
+      <div class="modal-media">
+        <img id="modalImage" src="" alt="">
+      </div>
+      <div class="modal-info">
+        <span class="product-badge" id="modalBadge" style="display:none; align-self:flex-start;"></span>
+        <h3 id="modalName"></h3>
+        <p class="product-desc" id="modalDesc"></p>
+        <div class="product-prices">
+          <span class="price-current" id="modalPrice"></span>
+          <span class="price-old" id="modalOldPrice"></span>
+        </div>
+        <div class="modal-qty">
+          <span>الكمية:</span>
+          <div class="qty-control">
+            <button type="button" id="modalQtyMinus" aria-label="إنقاص">−</button>
+            <span id="modalQty">1</span>
+            <button type="button" id="modalQtyPlus" aria-label="زيادة">+</button>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-outline btn-block" id="modalAddCart">أضف للسلة</button>
+          <button class="btn btn-primary btn-block" id="modalOrderNow">اطلب الآن</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/pixels.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
